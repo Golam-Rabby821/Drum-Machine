@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styling for the slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 8px;
+    height: 20px;
+    background: #f43f5e; /* Rose color for the thumb */
+    cursor: pointer; /* Changes cursor to pointer */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling */
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15); /* Slight zoom on hover for interactivity */
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.3); /* Larger zoom when active */
+  }
+  
+  /* Add consistent styles for Firefox */
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #f43f5e;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+  }
+  
+  input[type="range"]::-moz-range-thumb:active {
+    transform: scale(1.4);
+  }
+  
